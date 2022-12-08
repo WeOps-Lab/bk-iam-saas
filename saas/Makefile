@@ -29,7 +29,7 @@ release:
 	pip3 download pycparser==2.2  -i https://mirrors.cloud.tencent.com/pypi/simple -d /opt/bk_iam/pkgs  &&\
 	mkdir -p /opt/bk_iam/src/staticfiles &&\
 	cp -Rf ../frontend/dist/static /opt/bk_iam/src/staticfiles/  &&\
-	cp -Rf ../frontend/dist/*.html /opt/bk_iam/src/resources/templates/ &&\
+	# cp -Rf ../frontend/dist/*.html /opt/bk_iam/src/resources/templates/ &&\
 	cp -Rf ./app.yml /opt/bk_iam/  &&\
 	cp -Rf ./resources/bk_iam.png /opt/bk_iam/ &&\
 	cd /opt  &&\
