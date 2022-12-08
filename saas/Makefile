@@ -13,3 +13,24 @@ i18n_mo:
 export_requirements:
 	poetry export -f requirements.txt --output requirements.txt --without-hashes
 	poetry export --dev -f requirements.txt --output requirements_dev.txt --without-hashes
+
+release:
+	cd ../frontend  &&\
+	npm install  &&\
+	yarn run build:ce &&\
+	cd ../saas  &&\
+	rm -Rf /opt/bk_iam &&\
+	mkdir -p /opt/bk_iam &&\
+	cp -Rf ../saas /opt/bk_iam/src &&\
+	mkdir -p /opt/bk_iam/pkgs &&\
+	pip3 download -r ./requirements.txt -i https://mirrors.cloud.tencent.com/pypi/simple -d  /opt/bk_iam/pkgs  &&\
+	pip3 download cffi==1.14.6  -i https://mirrors.cloud.tencent.com/pypi/simple -d /opt/bk_iam/pkgs  &&\
+	pip3 download idna==2.1  -i https://mirrors.cloud.tencent.com/pypi/simple -d /opt/bk_iam/pkgs  &&\
+	pip3 download pycparser==2.2  -i https://mirrors.cloud.tencent.com/pypi/simple -d /opt/bk_iam/pkgs  &&\
+	mkdir -p /opt/bk_iam/src/staticfiles &&\
+	cp -Rf ../frontend/dist/static /opt/bk_iam/src/staticfiles/  &&\
+	cp -Rf ../frontend/dist/*.html /opt/bk_iam/src/resources/templates/ &&\
+	cp -Rf ./app.yml /opt/bk_iam/  &&\
+	cp -Rf ./resources/bk_iam.png /opt/bk_iam/ &&\
+	cd /opt  &&\
+	tar -zcvf bk_iam_V1.8.24-bkofficial.tar.gz bk_iam/

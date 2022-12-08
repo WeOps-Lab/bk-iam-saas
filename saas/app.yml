@@ -1,0 +1,445 @@
+app_code: bk_iam
+app_name: 权限中心V3
+app_name_en: IAM
+author: 蓝鲸智云
+category: 开发工具
+date: '2020-04-16 12:00:00'
+desktop:
+  height: 720
+  is_max: true
+  width: 1280
+  open_mode: new_tab
+introduction: 权限中心是蓝鲸智云提供的集中权限管理服务，用于蓝鲸体系内各平台和SaaS的权限集中接入，以及提供细化到具体资源实例的资源访问权限控制。
+introduction_en: IAM（Identity and Access Management） is centralized authority management services  provided by Blueking，which is used for centralized access of various Platforms and SaaS within the BlueKing System, and provides access control for resources that are refined to specific resource instance.
+is_use_celery: true
+libraries:
+
+  - name: aenum
+    version: 2.2.6
+
+
+  - name: aiocontextvars
+    version: 0.2.2
+
+
+  - name: amqp
+    version: 1.4.9
+
+
+  - name: anyjson
+    version: 0.3.3
+
+
+  - name: apigw-manager
+    version: 1.1.5
+
+
+  - name: backoff
+    version: 1.10.0
+
+
+  - name: billiard
+    version: 3.3.0.23
+
+
+  - name: bkapi-bk-apigateway
+    version: 1.0.6
+
+
+  - name: bkapi-client-core
+    version: 1.1.8
+
+
+  - name: blue-krill
+    version: 1.1.0
+
+
+  - name: celery
+    version: 3.1.25
+
+
+  - name: certifi
+    version: 2021.5.30
+
+
+  - name: cffi
+    version: 1.14.6
+
+
+  - name: charset-normalizer
+    version: 2.0.4
+
+
+  - name: click
+    version: 8.0.1
+
+
+  - name: colorama
+    version: 0.4.4
+
+
+  - name: contextvars
+    version: 2.4
+
+
+  - name: coreapi
+    version: 2.3.3
+
+
+  - name: coreschema
+    version: 0.0.4
+
+
+  - name: cryptography
+    version: 3.3.2
+
+
+  - name: curlify
+    version: 2.2.1
+
+
+  - name: dataclasses
+    version: 0.7
+
+
+  - name: decorator
+    version: 5.0.9
+
+
+  - name: deprecated
+    version: 1.2.13
+
+
+  - name: django-celery
+    version: 3.2.1
+
+
+  - name: django-cors-headers
+    version: 3.4.0
+
+
+  - name: django-environ
+    version: 0.8.1
+
+
+  - name: django-filter
+    version: 2.4.0
+
+
+  - name: django-js-asset
+    version: 1.2.2
+
+
+  - name: django-mptt
+    version: 0.11.0
+
+
+  - name: django-prometheus
+    version: 2.0.0
+
+
+  - name: django-redis
+    version: 4.11.0
+
+
+  - name: django
+    version: 2.2.28
+
+
+  - name: djangorestframework
+    version: 3.13.0
+
+
+  - name: dogpile.cache
+    version: 0.9.2
+
+
+  - name: drf-yasg
+    version: 1.20.0
+
+
+  - name: et-xmlfile
+    version: 1.1.0
+
+
+  - name: future
+    version: 0.18.2
+
+
+  - name: gevent
+    version: 21.12.0
+
+
+  - name: googleapis-common-protos
+    version: 1.54.0
+
+
+  - name: greenlet
+    version: 1.1.2
+
+
+  - name: grpcio
+    version: 1.42.0
+
+
+  - name: gunicorn
+    version: 20.1.0
+
+
+  - name: httplib2
+    version: 0.19.0
+
+
+  - name: idna
+    version: 2.10
+
+
+  - name: immutables
+    version: 0.16
+
+
+  - name: importlib-metadata
+    version: 4.6.3
+
+
+  - name: inflection
+    version: 0.5.1
+
+
+  - name: itypes
+    version: 1.2.0
+
+
+  - name: jinja2
+    version: 2.11.3
+
+
+  - name: kombu
+    version: 3.0.37
+
+
+  - name: mako
+    version: 1.0.6
+
+
+  - name: markupsafe
+    version: 1.1.1
+
+
+  - name: mysqlclient
+    version: 2.0.1
+
+
+  - name: openpyxl
+    version: 3.0.9
+
+
+  - name: opentelemetry-api
+    version: 1.7.1
+
+
+  - name: opentelemetry-exporter-jaeger-proto-grpc
+    version: 1.7.1
+
+
+  - name: opentelemetry-exporter-jaeger-thrift
+    version: 1.7.1
+
+
+  - name: opentelemetry-exporter-jaeger
+    version: 1.7.1
+
+
+  - name: opentelemetry-exporter-otlp-proto-grpc
+    version: 1.7.1
+
+
+  - name: opentelemetry-exporter-otlp-proto-http
+    version: 1.7.1
+
+
+  - name: opentelemetry-exporter-otlp
+    version: 1.7.1
+
+
+  - name: opentelemetry-instrumentation-celery
+    version: 0.26b1
+
+
+  - name: opentelemetry-instrumentation-dbapi
+    version: 0.26b1
+
+
+  - name: opentelemetry-instrumentation-django
+    version: 0.26b1
+
+
+  - name: opentelemetry-instrumentation-logging
+    version: 0.26b1
+
+
+  - name: opentelemetry-instrumentation-redis
+    version: 0.26b1
+
+
+  - name: opentelemetry-instrumentation-requests
+    version: 0.26b1
+
+
+  - name: opentelemetry-instrumentation-wsgi
+    version: 0.26b1
+
+
+  - name: opentelemetry-instrumentation
+    version: 0.26b1
+
+
+  - name: opentelemetry-proto
+    version: 1.7.1
+
+
+  - name: opentelemetry-sdk
+    version: 1.7.1
+
+
+  - name: opentelemetry-semantic-conventions
+    version: 0.26b1
+
+
+  - name: opentelemetry-util-http
+    version: 0.26b1
+
+
+  - name: packaging
+    version: 21.0
+
+
+  - name: prometheus-client
+    version: 0.11.0
+
+
+  - name: protobuf
+    version: 3.19.1
+
+
+  - name: pycparser
+    version: 2.20
+
+
+  - name: pydantic
+    version: 1.8.2
+
+
+  - name: pyinstrument-cext
+    version: 0.2.4
+
+
+  - name: pyinstrument
+    version: 3.1.3
+
+
+  - name: pyjwt
+    version: 1.7.1
+
+
+  - name: pyparsing
+    version: 2.4.7
+
+
+  - name: python-editor
+    version: 1.0.4
+
+
+  - name: python-json-logger
+    version: 0.1.7
+
+
+  - name: pytz
+    version: 2020.1
+
+
+  - name: pyyaml
+    version: 5.4.1
+
+
+  - name: redis
+    version: 2.10.6
+
+
+  - name: requests
+    version: 2.26.0
+
+
+  - name: ruamel.yaml.clib
+    version: 0.2.6
+
+
+  - name: ruamel.yaml
+    version: 0.17.10
+
+
+  - name: sentry-sdk
+    version: 1.5.6
+
+
+  - name: six
+    version: 1.15.0
+
+
+  - name: sqlparse
+    version: 0.4.2
+
+
+  - name: thrift
+    version: 0.15.0
+
+
+  - name: toml
+    version: 0.10.1
+
+
+  - name: typing-extensions
+    version: 3.7.4.3
+
+
+  - name: uritemplate
+    version: 3.0.1
+
+
+  - name: urllib3
+    version: 1.26.6
+
+
+  - name: watchdog
+    version: 1.0.2
+
+
+  - name: werkzeug
+    version: 1.0.1
+
+
+  - name: whitenoise
+    version: 5.1.0
+
+
+  - name: wrapt
+    version: 1.13.3
+
+
+  - name: zipp
+    version: 3.5.0
+
+
+  - name: zope.event
+    version: 4.5.0
+
+
+  - name: zope.interface
+    version: 5.4.0
+
+
+env:
+  - key: BKAPP_CONTAINER_MEM
+    value: 2048
+language: python
+version: 1.8.24
