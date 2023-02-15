@@ -42,7 +42,7 @@ greenlet==1.1.2
 grpcio==1.42.0
 gunicorn==20.1.0
 httplib2==0.19.0
-idna==2.10
+idna==2.1
 immutables==0.16
 importlib-metadata==4.6.3
 inflection==0.5.1
@@ -104,3 +104,4 @@ wrapt==1.13.3
 zipp==3.5.0
 zope.event==4.5.0
 zope.interface==5.4.0
+pycparser==2.2
