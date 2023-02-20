@@ -101,8 +101,6 @@ libraries:
     version: 20.1.0
   - name: httplib2
     version: 0.19.0
-  - name: idna
-    version: 2.10
   - name: immutables
     version: 0.16
   - name: importlib-metadata
@@ -167,8 +165,6 @@ libraries:
     version: 0.11.0
   - name: protobuf
     version: 3.19.1
-  - name: pycparser
-    version: 2.20
   - name: pydantic
     version: 1.8.2
   - name: pyinstrument-cext
@@ -223,10 +219,10 @@ libraries:
     version: 3.5.0
   - name: zope.event
     version: 4.5.0
+  - name: pycparser
+    version: 2.2
   - name: zope.interface
     version: 5.4.0
-
-
 env:
   - key: BKAPP_CONTAINER_MEM
     value: 2048

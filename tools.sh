@@ -3,7 +3,7 @@
 echo "libraries:"
 
 while read line; do
-  if [[ $line != \#* ]] && [[ $line != "" ]]; then
+  if [[ $line != \#* ]]; then
     name=$(echo $line | awk -F'==' '{print $1}')
     version=$(echo $line | awk -F'==' '{print $2}')
     echo "  - name: $name"
