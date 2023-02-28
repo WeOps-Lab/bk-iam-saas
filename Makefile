@@ -4,7 +4,7 @@ release:
 	rm -Rf $(RELEASE_PATH)
 	mkdir -p $(RELEASE_PATH)
 
-	cd ./frontend  && npm install  && npm run build:ce
+	cd ./frontend  && npm install  && npm run build:ee
 
 	cp ./saas/resources/bk_iam.png $(RELEASE_PATH)/logo.png
 	cp ./saas/app.yml $(RELEASE_PATH)
