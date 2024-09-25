@@ -227,4 +227,4 @@ env:
   - key: BKAPP_CONTAINER_MEM
     value: 2048
 language: python
-version: 1.8.24
+version: 1.8.24-weops
